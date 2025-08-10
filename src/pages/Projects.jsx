@@ -7,31 +7,31 @@ import { Code, Server, Brain, BookOpen, Cpu, Database } from "lucide-react";
 const Projects = () => {
   const projects = [
     {
-      id: "nlp-classification",
-      title: "NLP Text Classification System",
+      id: "journalApp",
+      title: "Journal App",
       description:
-        "Built a machine learning system for automatic text classification using NLP techniques. Achieved 94% accuracy on multi-class classification.",
-      technologies: ["Python", "NLP", "TensorFlow", "Scikit-learn"],
-      github: "https://github.com/yourusername/nlp-classification",
-      demo: "https://your-demo-url.com",
+        "The Journal Web App is a user-friendly digital diary designed to help users capture their thoughts, ideas, and daily experiences in a secure and organized manner. It acts as a personal space where users can create, view, edit, and manage their journal entries anytime, from any device.",
+      technologies: ["Java", "SpringBoot", "MongoDB", "Docker", "React"],
+      github: "https://github.com/ravix2001/journalApp",
+      demo: "https://journal-psi-eight.vercel.app",
     },
     {
-      id: "java-microservices",
-      title: "Java Microservices Platform",
+      id: "ecommercePlatform",
+      title: "Ecommerce Platform",
       description:
-        "Designed and implemented a scalable microservices architecture for e-commerce platform handling 100k+ daily transactions.",
-      technologies: ["Java", "Spring Boot", "Docker", "Kubernetes"],
-      github: "https://github.com/yourusername/java-microservices",
-      demo: "https://your-demo-url.com",
+        "Orbit provides a professional, scalable platform suitable for small to medium online retailers looking to digitize their sales process. The project showcases strong full-stack development skills, combining modern frontend frameworks with solid backend API design.",
+      technologies: ["Java", "Spring Boot", "MySQL" , "React", "Tailwind CSS"],
+      github: "https://github.com/ravix2001/orbit",
+      demo: "https://github.com/ravix2001/orbit",
     },
     {
-      id: "ai-chatbot",
-      title: "AI-Powered Chatbot",
+      id: "sentimentAnalysis",
+      title: "Sentiment Analysis Tool",
       description:
-        "Developed an intelligent chatbot using NLP and deep learning for customer support automation.",
-      technologies: ["Python", "NLP", "PyTorch", "FastAPI"],
-      github: "https://github.com/yourusername/ai-chatbot",
-      demo: "https://your-demo-url.com",
+        "Trained a Logistic Regression model with TF-IDF to classify e-commerce product reviews. Scrapes reviews from Amazon/Daraz, provides insights, and integrates with Firefox via browser extension for real-time sentiment feedback.",
+      technologies: ["Python", "NLP", "Scikit-Learn", "Matplotlib", "Render"],
+      github: "https://github.com/ravix2001/model_minor_project",
+      demo: "https://addons.mozilla.org/en-US/firefox/addon/product-review-insight",
     },
   ];
 
