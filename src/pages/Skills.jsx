@@ -45,6 +45,8 @@ import {
   Settings,
   Sparkles,
   FlaskConical,
+  Rocket,
+  Cloud,
 } from "lucide-react";
 
 const Skills = () => {
@@ -110,6 +112,8 @@ const Skills = () => {
     // DevOps & Tools
     { name: "Git & GitHub", icon: GitMerge, level: 85, id: "git", category: "development" },
     { name: "Docker", icon: Box, level: 70, id: "docker", category: "development" },
+    { name: "Vercel", icon: Rocket, level: 75, id: "vercel", category: "development" },
+    { name: "Render", icon: Cloud, level: 75, id: "render", category: "development" },
   ];
 
   const categories = [

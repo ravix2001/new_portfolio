@@ -5,21 +5,21 @@ const Testimonials = () => {
     const testimonials = [
     {
       id: 1,
-      name: "Sarah Johnson",
-      role: "Tech Lead at Innovation Corp",
+      name: "Rajesh Pandey",
+      role: "MERN Stack Developer at YOUTHIT",
       content:
-        "Outstanding Java developer with deep expertise in AI/ML. Delivered our microservices platform ahead of schedule with exceptional quality.",
+        "Outstanding Java developer with deep expertise in AI/ML. His ability to seamlessly integrate complex NLP models into practical applications like the Sentiment Analysis project truly sets him apart. His dedication and technical skills make him a valuable asset to any team.",
       rating: 5,
-      image: "https://ext.same-assets.com/avatar-1.jpg",
+      image: "https://avatars.githubusercontent.com/u/127168925?v=4",
     },
     {
       id: 2,
-      name: "Michael Chen",
-      role: "CTO at DataFlow Systems",
+      name: "Nigam Yadav",
+      role: "Student at IOE Purwanchal Campus",
       content:
-        "Exceptional problem-solving skills and innovative approach to NLP solutions. The chatbot system exceeded our expectations significantly.",
+        "Exceptional problem-solving skills and innovative approach to NLP solutions.",
       rating: 5,
-      image: "https://ext.same-assets.com/avatar-2.jpg",
+      image: "https://avatars.githubusercontent.com/u/71872897?v=4",
     },
     {
       id: 3,
@@ -41,7 +41,8 @@ const Testimonials = () => {
       >
         <div className="container-custom">
           <h2 className="text-center text-gray-900 dark:text-white mb-12 animate-fade-in-up">
-            What Clients Say
+            {/* What Clients Say */}
+            What Others Say
           </h2>
           <div className="max-w-6xl mx-auto">
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
