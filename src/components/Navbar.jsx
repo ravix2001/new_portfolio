@@ -74,12 +74,12 @@ const Navbar = () => {
                 >
                   Skills
                 </Link>
-                <Link
+                {/* <Link
                     to="/experience"
                   className="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors"
                 >
                   Experience
-                </Link>
+                </Link> */}
                 <Link
                     to="/projects"
                   className="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors"
@@ -161,12 +161,12 @@ const Navbar = () => {
                 >
                   Skills
                 </Link>
-                <Link
+                {/* <Link
                     to="/experience"
                   className="px-4 py-3 text-center text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors"
                 >
                   Experience
-                </Link>
+                </Link> */}
                 <Link
                     to="/projects"
                   className="px-4 py-3 text-center text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors"

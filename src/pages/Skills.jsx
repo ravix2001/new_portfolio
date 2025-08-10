@@ -33,6 +33,18 @@ import {
   Workflow,
   TrendingUp,
   Network,
+  Globe,
+  Layers,
+  FileCode2,
+  Palette,
+  Shield,
+  Play,
+  Binary,
+  Puzzle,
+  LineChart,
+  Settings,
+  Sparkles,
+  FlaskConical,
 } from "lucide-react";
 
 const Skills = () => {
@@ -66,15 +78,15 @@ const Skills = () => {
     // Core Programming & Frameworks
     { name: "Java", icon: Coffee, level: 80, id: "java", category: "development" },
     { name: "Spring Boot", icon: Leaf, level: 80, id: "spring", category: "development" },
-    { name: "Python", icon: Code, level: 80, id: "python", category: "development" },
+    { name: "Python", icon: FileCode2, level: 80, id: "python", category: "development" },
     { name: "JavaScript", icon: Code, level: 70, id: "javascript", category: "development" },
     { name: "React", icon: Atom, level: 70, id: "react", category: "development" },
     { name: "SQL/NoSQL", icon: Database, level: 80, id: "sql", category: "development" },
 
     // Web & API Development
-    { name: "RESTful APIs", icon: Server, level: 80, id: "restapi", category: "development" },
-    { name: "Tailwind CSS", icon: Wind, level: 75, id: "tailwind", category: "development" },
-    { name: "JUnit", icon: TestTube, level: 70, id: "junit", category: "development" },
+    { name: "RESTful APIs", icon: Globe, level: 80, id: "restapi", category: "development" },
+    { name: "Tailwind CSS", icon: Palette, level: 75, id: "tailwind", category: "development" },
+    { name: "JUnit", icon: Shield, level: 70, id: "junit", category: "development" },
     { name: "Maven", icon: Package, level: 75, id: "maven", category: "development" },
 
     // AI/ML & Data Science
@@ -86,17 +98,15 @@ const Skills = () => {
       id: "nlp",
       category: "ai-ml"
     },
-    { name: "Deep Learning", icon: Network, level: 75, id: "deeplearning", category: "ai-ml" },
-    { name: "TensorFlow", icon: Zap, level: 75, id: "tensorflow", category: "ai-ml" },
-    { name: "PyTorch", icon: Activity, level: 70, id: "pytorch", category: "ai-ml" },
-    { name: "Scikit-learn", icon: Target, level: 80, id: "sklearn", category: "ai-ml" },
+    { name: "Deep Learning", icon: Layers, level: 70, id: "deeplearning", category: "ai-ml" },
+    { name: "PyTorch", icon: Zap, level: 60, id: "pytorch", category: "ai-ml" },
+    { name: "Scikit-learn", icon: FlaskConical, level: 80, id: "sklearn", category: "ai-ml" },
     { name: "NumPy", icon: Calculator, level: 85, id: "numpy", category: "ai-ml" },
-    { name: "Pandas", icon: Table, level: 85, id: "pandas", category: "ai-ml" },
+    { name: "Pandas", icon: Grid, level: 85, id: "pandas", category: "ai-ml" },
+    { name: "Matplotlib", icon: LineChart, level: 80, id: "matplotlib", category: "ai-ml" },
     { name: "Data Visualization", icon: BarChart3, level: 80, id: "dataviz", category: "ai-ml" },
-    { name: "Computer Vision", icon: Eye, level: 70, id: "cv", category: "ai-ml" },
     { name: "Statistical Analysis", icon: TrendingUp, level: 75, id: "stats", category: "ai-ml" },
-    { name: "MLOps", icon: Workflow, level: 65, id: "mlops", category: "ai-ml" },
-
+    
     // DevOps & Tools
     { name: "Git & GitHub", icon: GitMerge, level: 85, id: "git", category: "development" },
     { name: "Docker", icon: Box, level: 70, id: "docker", category: "development" },
