@@ -1,0 +1,187 @@
+import React from "react";
+import { useEffect, useRef, useState } from "react";
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
+import {
+  Code,
+  Server,
+  Brain,
+  BookOpen,
+  Cpu,
+  Database,
+  Leaf,
+  Atom,
+  Wind,
+  Package,
+  Coffee,
+  TestTube,
+  GitBranch,
+  GitMerge,
+  GitFork,
+  GitPullRequest,
+  GitCompare,
+  Box,
+  Calculator,
+  Grid,
+  Table,
+  LucideWind,
+  BarChart3,
+  Eye,
+  Target,
+  Zap,
+  Activity,
+  Workflow,
+  TrendingUp,
+  Network,
+} from "lucide-react";
+
+const Skills = () => {
+  const [skillsInView, setSkillsInView] = useState(false);
+  const [activeCategory, setActiveCategory] = useState("all");
+  const skillsRef = useRef(null);
+
+  useEffect(() => {
+    // Intersection Observer for skills animation
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setSkillsInView(true);
+        }
+      },
+      { threshold: 0.3 }
+    );
+
+    if (skillsRef.current) {
+      observer.observe(skillsRef.current);
+    }
+
+    return () => {
+      if (skillsRef.current) {
+        observer.unobserve(skillsRef.current);
+      }
+    };
+  }, []);
+
+  const skills = [
+    // Core Programming & Frameworks
+    { name: "Java", icon: Coffee, level: 80, id: "java", category: "development" },
+    { name: "Spring Boot", icon: Leaf, level: 80, id: "spring", category: "development" },
+    { name: "Python", icon: Code, level: 80, id: "python", category: "development" },
+    { name: "JavaScript", icon: Code, level: 70, id: "javascript", category: "development" },
+    { name: "React", icon: Atom, level: 70, id: "react", category: "development" },
+    { name: "SQL/NoSQL", icon: Database, level: 80, id: "sql", category: "development" },
+
+    // Web & API Development
+    { name: "RESTful APIs", icon: Server, level: 80, id: "restapi", category: "development" },
+    { name: "Tailwind CSS", icon: Wind, level: 75, id: "tailwind", category: "development" },
+    { name: "JUnit", icon: TestTube, level: 70, id: "junit", category: "development" },
+    { name: "Maven", icon: Package, level: 75, id: "maven", category: "development" },
+
+    // AI/ML & Data Science
+    { name: "Machine Learning", icon: Brain, level: 80, id: "ml", category: "ai-ml" },
+    {
+      name: "Natural Language Processing",
+      icon: BookOpen,
+      level: 80,
+      id: "nlp",
+      category: "ai-ml"
+    },
+    { name: "Deep Learning", icon: Network, level: 75, id: "deeplearning", category: "ai-ml" },
+    { name: "TensorFlow", icon: Zap, level: 75, id: "tensorflow", category: "ai-ml" },
+    { name: "PyTorch", icon: Activity, level: 70, id: "pytorch", category: "ai-ml" },
+    { name: "Scikit-learn", icon: Target, level: 80, id: "sklearn", category: "ai-ml" },
+    { name: "NumPy", icon: Calculator, level: 85, id: "numpy", category: "ai-ml" },
+    { name: "Pandas", icon: Table, level: 85, id: "pandas", category: "ai-ml" },
+    { name: "Data Visualization", icon: BarChart3, level: 80, id: "dataviz", category: "ai-ml" },
+    { name: "Computer Vision", icon: Eye, level: 70, id: "cv", category: "ai-ml" },
+    { name: "Statistical Analysis", icon: TrendingUp, level: 75, id: "stats", category: "ai-ml" },
+    { name: "MLOps", icon: Workflow, level: 65, id: "mlops", category: "ai-ml" },
+
+    // DevOps & Tools
+    { name: "Git & GitHub", icon: GitMerge, level: 85, id: "git", category: "development" },
+    { name: "Docker", icon: Box, level: 70, id: "docker", category: "development" },
+  ];
+
+  const categories = [
+    { id: "all", name: "All Skills", count: skills.length },
+    { id: "development", name: "Development", count: skills.filter(s => s.category === "development").length },
+    { id: "ai-ml", name: "AI/ML", count: skills.filter(s => s.category === "ai-ml").length },
+  ];
+
+  const filteredSkills = activeCategory === "all" 
+    ? skills 
+    : skills.filter(skill => skill.category === activeCategory);
+
+  return (
+    <>
+      <Navbar />
+      {/* Skills Section */}
+      <section
+        id="skills"
+        className="section-padding bg-gray-50 dark:bg-gray-900"
+        ref={skillsRef}
+      >
+        <div className="container-custom">
+          <h2 className="text-center text-gray-900 dark:text-white mb-8 animate-fade-in-up">
+            Skills & Technologies
+          </h2>
+          
+          {/* Category Filter Buttons */}
+          <div className="flex justify-center mb-12 animate-fade-in-up" style={{ animationDelay: "200ms" }}>
+            <div className="inline-flex bg-white dark:bg-gray-800 rounded-lg p-1 shadow-lg border border-gray-200 dark:border-gray-700">
+              {categories.map((category) => (
+                <button
+                  key={category.id}
+                  onClick={() => setActiveCategory(category.id)}
+                  className={`px-6 py-3 rounded-md font-medium text-sm transition-all duration-300 ${
+                    activeCategory === category.id
+                      ? "bg-gray-800 dark:bg-gray-600 text-white shadow-md"
+                      : "text-gray-600 dark:text-gray-300 hover:text-gray-800 dark:hover:text-white hover:bg-gray-100 dark:hover:bg-gray-700"
+                  }`}
+                >
+                  {category.name}
+                  <span className="ml-2 text-xs opacity-75">
+                    ({category.count})
+                  </span>
+                </button>
+              ))}
+            </div>
+          </div>
+
+          <div className="max-w-4xl mx-auto">
+            <div className="grid md:grid-cols-2 gap-8">
+              {filteredSkills.map((skill, index) => (
+                <div
+                  key={skill.id}
+                  className="card-dark animate-fade-in-up"
+                  style={{ animationDelay: `${index * 100}ms` }}
+                >
+                  <div className="flex items-center mb-3">
+                    <skill.icon className="w-6 h-6 text-gray-700 dark:text-gray-300 mr-3" />
+                    <h4 className="text-gray-900 dark:text-white">
+                      {skill.name}
+                    </h4>
+                  </div>
+                  <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2">
+                    <div
+                      className="bg-gray-800 dark:bg-gray-400 h-2 rounded-full transition-all duration-2000 ease-out"
+                      style={{
+                        width: skillsInView ? `${skill.level}%` : "0%",
+                      }}
+                    />
+                  </div>
+                  <div className="text-sm text-gray-600 dark:text-gray-400 mt-1">
+                    {skill.level}%
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+      <Footer />
+    </>
+  );
+};
+
+export default Skills;
