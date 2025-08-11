@@ -55,25 +55,21 @@ const Skills = () => {
   const skillsRef = useRef(null);
 
   useEffect(() => {
-    // Intersection Observer for skills animation
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
-          setSkillsInView(true);
+          setSkillsInView(true); // animate all skills at once
+          observer.disconnect(); // stop observing after first trigger
         }
       },
-      { threshold: 0.3 }
+      { threshold: 0.1 } // triggers earlier
     );
 
     if (skillsRef.current) {
       observer.observe(skillsRef.current);
     }
 
-    return () => {
-      if (skillsRef.current) {
-        observer.unobserve(skillsRef.current);
-      }
-    };
+    return () => observer.disconnect();
   }, []);
 
   const skills = [
