@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 /* Light mode variables */
-:root {
+/* :root {
   --background: 0 0% 100%;
   --foreground: 240 10% 3.9%;
   --card: 0 0% 100%;
@@ -21,10 +21,10 @@
   --border: 240 5.9% 90%;
   --input: 240 5.9% 90%;
   --ring: 240 5.9% 10%;
-}
+} */
 
 /* Dark mode variables */
-.dark {
+/* .dark {
   --background: 240 10% 3.9%;
   --foreground: 0 0% 98%;
   --card: 240 10% 3.9%;
@@ -44,7 +44,7 @@
   --border: 240 3.7% 15.9%;
   --input: 240 3.7% 15.9%;
   --ring: 240 4.9% 83.9%;
-}
+} */
 
 @layer base {
   html {
@@ -91,7 +91,7 @@
 
 @layer components {
   .section-padding {
-    @apply py-16 md:py-24 lg:py-32;
+    @apply py-24 md:py-24 lg:py-32;
   }
 
   .container-custom {
